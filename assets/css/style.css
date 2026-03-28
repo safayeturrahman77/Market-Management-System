@@ -1,0 +1,220 @@
+/* Navbar */
+.navbar {
+    background: #28a745;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+/* Home Section */
+.home-container {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.home-btn {
+    padding: 10px 20px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* Form Box */
+.form-box {
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px gray;
+    border-radius: 8px;
+}
+
+.form-box input,
+.form-box select {
+    width: 100%;
+    padding: 8px;
+    margin: 6px 0 12px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-box button {
+    width: 100%;
+    padding: 10px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.form-box a {
+    color: #28a745;
+}
+
+footer {
+    text-align: center;
+    margin-top: 150px;
+    padding: 10px;
+    background: #f2f2f2;
+}
+
+/* ── JS-powered components ── */
+
+/* Alert messages */
+.alert {
+    padding: 12px 16px;
+    margin: 12px auto;
+    width: 80%;
+    border-radius: 6px;
+    font-size: 15px;
+    text-align: center;
+}
+.alert-success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+.alert-error   { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+
+/* Field validation errors */
+.field-error {
+    display: block;
+    color: #dc3545;
+    font-size: 12px;
+    margin-top: -8px;
+    margin-bottom: 8px;
+}
+.input-error {
+    border-color: #dc3545 !important;
+    background: #fff5f5;
+}
+
+/* Delete confirm modal */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+.modal-overlay.active { display: flex; }
+
+.modal-box {
+    background: white;
+    border-radius: 10px;
+    padding: 30px 36px;
+    max-width: 360px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+.modal-msg {
+    font-size: 17px;
+    margin-bottom: 24px;
+    color: #333;
+}
+.modal-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+.btn-cancel {
+    padding: 9px 22px;
+    border: 1px solid #ccc;
+    background: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.btn-cancel:hover { background: #f2f2f2; }
+
+.btn-confirm-delete {
+    padding: 9px 22px;
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.btn-confirm-delete:hover { background: #c82333; }
+
+/* Live search input */
+#live-search {
+    width: 100%;
+    padding: 9px 12px;
+    margin-bottom: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Rent record row states */
+.row-overdue td { background: #fff5f5; }
+.row-paid    td { background: #f0fff4; }
+
+/* Active nav link */
+.nav-links a.nav-active {
+    text-decoration: underline;
+    font-weight: bold;
+    opacity: 0.85;
+}
+
+/* Toast notifications */
+.toast {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    padding: 13px 22px;
+    border-radius: 8px;
+    color: white;
+    font-size: 15px;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 2000;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+}
+.toast-visible { opacity: 1; transform: translateY(0); }
+.toast-success { background: #28a745; }
+.toast-error   { background: #dc3545; }
+
+/* Responsive table wrapper */
+.table-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+table th {
+    background: #28a745;
+    color: white;
+    padding: 10px;
+}
+table td {
+    padding: 9px 10px;
+}
+table tr:nth-child(even) td { background: #f9f9f9; }
+table tr:hover td { background: #eaf6ed; }

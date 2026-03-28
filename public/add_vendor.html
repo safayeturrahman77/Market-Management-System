@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Vendor - Market Management System</title>
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <h1 class="logo">Market Management System</h1>
+    <div class="nav-links">
+        <a href="/modules/admin/dashboard.php">Dashboard</a>
+        <a href="/auth/logout.php">Logout</a>
+    </div>
+</div>
+
+<div class="form-box">
+    <h2>Add Vendor</h2>
+    <form action="/modules/vendor/add_vendor.php" method="POST" data-validate>
+        <label>Vendor Name</label>
+        <input type="text" name="name" placeholder="Full name" required>
+
+        <label>Phone Number</label>
+        <input type="text" name="phone" placeholder="Phone number" required>
+
+        <label>Shop Name</label>
+        <input type="text" name="shop_name" placeholder="Assigned shop name" required>
+
+        <button type="submit">Add Vendor</button>
+    </form>
+    <p><a href="/modules/admin/dashboard.php">Back to Dashboard</a></p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Market Management System</title>
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <h1 class="logo">Market Management System</h1>
+    <div class="nav-links">
+        <a href="/public/index.php">Home</a>
+        <a href="/public/login.html">Login</a>
+    </div>
+</div>
+
+<div class="form-box">
+    <h2>Register</h2>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('error')) {
+            document.write('<p style="color:red;">' + params.get('error') + '</p>');
+        }
+    </script>
+
+    <form action="/auth/register.php" method="POST" data-validate>
+        <label>Username</label>
+        <input type="text" name="username" placeholder="Choose a username" required>
+
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Email address" required>
+
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Create a password" required>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <p>Already have an account? <a href="/public/login.html">Login Here</a></p>
+</div>
+
+</body>
+</html>

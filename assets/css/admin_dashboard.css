@@ -1,0 +1,22 @@
+.dashboard {
+    width: 400px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard a {
+    background: #28a745;
+    color: white;
+    padding: 10px;
+    margin: 5px 0;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 15px;
+    transition: background 0.2s;
+}
+
+.dashboard a:hover {
+    background: #218838;
+}

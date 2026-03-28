@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Payment - Market Management System</title>
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <h1 class="logo">Market Management System</h1>
+    <div class="nav-links">
+        <a href="/modules/admin/dashboard.php">Dashboard</a>
+        <a href="/auth/logout.php">Logout</a>
+    </div>
+</div>
+
+<div class="form-box">
+    <h2>Add Payment</h2>
+    <form action="/modules/payment/add_payment.php" method="POST" data-validate>
+        <label>Vendor ID</label>
+        <input type="number" name="vendor_id" placeholder="Vendor ID" required>
+
+        <label>Amount (TK)</label>
+        <input type="number" name="amount" placeholder="Payment amount" step="0.01" required>
+
+        <label>Payment Method</label>
+        <select name="payment_method">
+            <option value="Cash">Cash</option>
+            <option value="Bank Transfer">Bank Transfer</option>
+            <option value="Mobile Banking">Mobile Banking</option>
+        </select>
+
+        <label>Payment Date</label>
+        <input type="date" name="payment_date" required>
+
+        <button type="submit">Submit Payment</button>
+    </form>
+    <p><a href="/modules/admin/dashboard.php">Back to Dashboard</a></p>
+</div>
+
+</body>
+</html>

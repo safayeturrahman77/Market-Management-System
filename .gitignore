@@ -1,0 +1,19 @@
+# Dependencies
+vendor/fpdf/
+
+# Environment / config overrides
+config/local.php
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# PHP session files
+/tmp/

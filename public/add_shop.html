@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Shop - Market Management System</title>
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <h1 class="logo">Market Management System</h1>
+    <div class="nav-links">
+        <a href="/modules/admin/dashboard.php">Dashboard</a>
+        <a href="/auth/logout.php">Logout</a>
+    </div>
+</div>
+
+<div class="form-box">
+    <h2>Add Shop Record</h2>
+    <form action="/modules/shop/add_shop.php" method="POST" data-validate>
+        <label>Shop Name</label>
+        <input type="text" name="shop_name" placeholder="Shop name" required>
+
+        <label>Owner Name</label>
+        <input type="text" name="owner_name" placeholder="Owner name" required>
+
+        <label>Location</label>
+        <input type="text" name="location" placeholder="Location / block number" required>
+
+        <label>Monthly Rent (TK)</label>
+        <input type="number" name="rent" placeholder="Monthly rent amount" required>
+
+        <button type="submit">Add Shop</button>
+    </form>
+    <p><a href="/modules/admin/dashboard.php">Back to Dashboard</a></p>
+</div>
+
+</body>
+</html>
