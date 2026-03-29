@@ -10,7 +10,11 @@ if (!file_exists($fpdf_path)) {
     die("FPDF library not found. Please download fpdf.php from http://www.fpdf.org/ and place it at vendor/fpdf/fpdf.php");
 }
 
-require($fpdf_path);
+require_once($fpdf_path);
+
+if (!class_exists('FPDF')) {
+    die("FPDF class could not be loaded. Please ensure fpdf.php is valid.");
+}
 
 $pdf = new FPDF();
 $pdf->AddPage();
